@@ -4,6 +4,7 @@ const navLinks = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+  menuToggle.classList.toggle("active");
 });
 
 // Sticky header after scroll
