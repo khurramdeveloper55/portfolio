@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khurram Shehzad | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -18,15 +18,41 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header>
+    <header id="header">
       <nav class="navbar">
-        <div class="logo">Khurram</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <div class="logo"><span class="logo-circle">K</span>hurram</div>
+
+        <!-- Toggle button -->
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a href="#home" class="nav-link active"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link"
+              ><i class="fas fa-code"></i> Projects</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link"
+              ><i class="fas fa-user"></i> About Me</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="nav-link"
+              ><i class="fas fa-laptop-code"></i> Skills</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -34,77 +60,115 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="circle"></div>
-      <h1>
-        Hi, I am <span class="highlight">Khurram Shehzad</span> <br />
-        An expert front-end website developer
-      </h1>
-
-      <a href="#contact" class="btn">
-        Let’s Talk <span class="icon"><i class="fas fa-arrow-right"></i></span>
-      </a>
+      <div class="hero-text">
+        <h1>Hi, I am <span class="highlight">Khurram Shehzad</span></h1>
+        <h2>
+          I'm a Front End Developer skilled in HTML, CSS, React, and Next.js. I
+          enjoy creating fast, responsive, and engaging websites. Feel free to
+          explore my recent projects by clicking the button below.
+        </h2>
+        <a href="#projects" class="btn pulse-btn">
+          View My Projects
+          <span class="icon"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section project">
       <h2>Projects</h2>
+      <p>
+        Explore my projects that highlight expertise in modern web development,
+        React, Next.js, and performance-driven solutions.
+      </p>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/nextpress.jpg" alt="" />
           <div class="project-info">
-            <span>Project One</span>
+            <span>NextPress</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a
+                href="https://github.com/khurramdeveloper55/nextpress"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://nextpress.netlify.app/" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/porto-tech.jpg" alt="" />
           <div class="project-info">
-            <span>Project Two</span>
+            <span>Porto Ecommerce</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a
+                href="https://github.com/khurramdeveloper55/Porto"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://porto-tech-website.netlify.app/" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/natours.jpg" alt="" />
           <div class="project-info">
-            <span>Project Three</span>
+            <span>Natours</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a
+                href="https://github.com/khurramdeveloper55/natours"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://natours-web-9ph6.onrender.com/" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/the-wild-oasis.jpg" alt="" />
           <div class="project-info">
-            <span>Project Four</span>
+            <span>The Wild Oasis</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a
+                href="https://the-wild-oasis-web-demo-zeta.vercel.app/"
+                target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/nextpress-dashboard.jpg" alt="" />
           <div class="project-info">
-            <span>Project Five</span>
+            <span>NextPress Dashboard</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a
+                href="https://github.com/khurramdeveloper55/nextpress"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://nextpress.netlify.app/dashboard" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/img/project.jpg" alt="" />
+          <img src="/img/fast-pizza-co.jpg" alt="" />
           <div class="project-info">
-            <span>Project Six</span>
+            <span>Fast Pizza Co</span>
             <div class="project-links">
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fas fa-link"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://pizza-delivery-co.netlify.app/" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -116,14 +180,53 @@
       <h2>About Me</h2>
       <div class="about-content">
         <div class="about-img">
-          <img src="img/profile.jpg" alt="Profile" />
+          <img src="/img/profile.jpg" alt="Profile" />
         </div>
         <div class="about-text">
           <p>
-            I’m Khurram Shehzad, a front-end developer with experience in
-            building responsive, modern, and optimized websites. I love creating
-            user-friendly designs and interactive web applications.
+            Frontend Developer with 2+ years of experience building responsive
+            and dynamic web applications. Skilled in React.js and Next.js with
+            strong knowledge of state management (Redux, Context API, React
+            Query) and backend integration (Next.js API routes, Node.js,
+            Express, MongoDB, Supabase). Experienced in authentication,
+            dashboards, role-based systems, and payment integration. Seeking a
+            React/Next.js developer role to deliver scalable, user-focused, and
+            performant applications.
           </p>
+          <div class="about-info">
+            <div class="info-row">
+              <span class="label">Name:</span>
+              <span class="value">Khurram Shehzad</span>
+            </div>
+            <div class="info-row">
+              <span class="label">DOB:</span>
+              <span class="value">June 20, 2001</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Email:</span>
+              <span class="value">
+                <a href="mailto:shehzadkhurram744@gmail.com" class="link email">
+                  <i class="fas fa-envelope"></i> shehzadkhurram744@gmail.com
+                </a>
+              </span>
+            </div>
+            <div class="info-row">
+              <span class="label">Whatsapp:</span>
+              <span class="value">
+                <a href="tel:+923175520572" class="link phone">
+                  <i class="fas fa-phone"></i> +92 317 5520572
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <a
+            href="/resume/khurram-shehzad-react-next-developer.pdf"
+            class="btn-cv"
+            download
+          >
+            <i class="fas fa-download"></i> Download CV
+          </a>
         </div>
       </div>
     </section>
@@ -132,17 +235,39 @@
     <section id="skills" class="section">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill"><img src="img/react.png" alt="" />React JS</div>
-        <div class="skill"><img src="img/js.png" alt="" />JavaScript</div>
-        <div class="skill"><img src="img/html.png" alt="" />HTML5</div>
-        <div class="skill"><img src="img/css.png" alt="" />CSS3</div>
-        <div class="skill"><img src="img/bootstrap.png" alt="" />Bootstrap</div>
-        <div class="skill"><img src="img/node.png" alt="" />Node.js</div>
-        <div class="skill"><img src="img/git.png" alt="" />Git</div>
-        <div class="skill"><img src="img/github.png" alt="" />GitHub</div>
-        <div class="skill"><img src="img/figma.png" alt="" />Figma</div>
+        <div class="skill"><img src="/img/icons/html5.png" alt="" />HTML5</div>
+        <div class="skill"><img src="/img/icons/css3.png" alt="" />CSS3</div>
         <div class="skill">
-          <img src="img/responsive.png" alt="" />Responsive Design
+          <img src="/img/icons/bootstrap.png" alt="" />Bootstrap
+        </div>
+        <div class="skill">
+          <img src="/img/icons/tailwind-css.png" alt="" />Tailwind CSS
+        </div>
+        <div class="skill">
+          <img src="/img/icons/javascript.png" alt="" />Javascript
+        </div>
+        <div class="skill">
+          <img src="/img/icons/react.png" alt="" />React.js
+        </div>
+        <div class="skill"><img src="/img/icons/redux.png" alt="" />Redux</div>
+        <div class="skill">
+          <img src="/img/icons/next.js.png" alt="" />Next.js
+        </div>
+        <div class="skill">
+          <img src="/img/icons/node.js.png" alt="" />Node.js
+        </div>
+        <div class="skill">
+          <img src="/img/icons/express.png" alt="" />Express.js
+        </div>
+        <div class="skill">
+          <img src="/img/icons/mongodb.png" alt="" />MongoDB
+        </div>
+        <div class="skill"><img src="/img/icons/git.png" alt="" />Git</div>
+        <div class="skill">
+          <img src="/img/icons/github.png" alt="" />GitHub
+        </div>
+        <div class="skill">
+          <img src="/img/icons/postman.png" alt="" />Postman
         </div>
       </div>
     </section>
@@ -150,19 +275,42 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
       <h2>Contact Me</h2>
+      <p>
+        If you like my work and want to discuss new projects or collaborations,
+        I’d love to hear from you.
+      </p>
       <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
         <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
+        <button type="submit">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
       </form>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>© 2025 Khurram Shehzad | Built with ❤️</p>
+      <div class="footer-socials">
+        <a href="mailto:shehzadkhurram744@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://github.com/khurramdeveloper55" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+
+        <a href="https://www.linkedin.com/in/khurram-shxad/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <p>
+        Copyright © <span id="year"></span> All rights reserved | This Portfolio
+        is made by <span class="highlight">Khurram Shehzad</span>
+      </p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
