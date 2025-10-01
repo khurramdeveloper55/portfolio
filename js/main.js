@@ -38,57 +38,38 @@ window.addEventListener("scroll", () => {
   });
 });
 
-(function () {
-  emailjs.init("aSrRjPdVwn8E534s3");
-})();
+document.getElementById("contactForm").addEventListener("submit", function () {
+  const popup = document.createElement("div");
+  popup.innerText = "✅ Message Sent Successfully!";
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  emailjs
-    .send(
-      "service_7xsa06h",
-      "template_k5nxzqq",
-      {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-      },
-      "aSrRjPdVwn8E534s3"
-    )
-    .then(
-      function () {
-        showPopup("✅ Message Sent Successfully!");
-        document.getElementById("contactForm").reset();
-      },
-      function (error) {
-        showPopup("❌ Failed to send. Try again.");
-      }
-    );
-});
-
-// Simple popup
-function showPopup(msg) {
-  let popup = document.createElement("div");
-  popup.innerText = msg;
   popup.style.position = "fixed";
-  popup.style.top = "50%";
-  popup.style.left = "50%";
-  popup.style.transform = "translate(-50%, -50%)";
-  popup.style.padding = "20px 40px";
+  popup.style.top = "20px";
+  popup.style.right = "20px";
+  popup.style.padding = "15px 30px";
   popup.style.background = "#0068c8";
   popup.style.color = "#fff";
-  popup.style.fontSize = "18px";
+  popup.style.fontSize = "16px";
   popup.style.borderRadius = "10px";
   popup.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
   popup.style.zIndex = "9999";
-  popup.style.transition = "opacity 0.5s ease";
+  popup.style.opacity = "0";
+  popup.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+  popup.style.transform = "translateY(-20px)";
+
   document.body.appendChild(popup);
 
+  // Animate in
+  setTimeout(() => {
+    popup.style.opacity = "1";
+    popup.style.transform = "translateY(0)";
+  }, 50);
+
+  // Animate out and remove
   setTimeout(() => {
     popup.style.opacity = "0";
-    setTimeout(() => popup.remove(), 500);
+    popup.style.transform = "translateY(-20px)";
+    setTimeout(() => popup.remove(), 400);
   }, 2500);
-}
+});
 
 document.getElementById("year").textContent = new Date().getFullYear();

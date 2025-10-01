@@ -19,9 +19,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/img/favicon.ico" />
 
-    <!-- Email JS -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-
     <!-- AOS Animation -->
     <!-- AOS CSS -->
     <link
@@ -500,12 +497,31 @@
         I’d love to hear from you.
       </p>
       <div class="form-wrapper">
-        <form id="contactForm">
+        <form name="contact" method="POST" data-netlify="true" id="contactForm">
           <div class="form-row">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
+            <input type="hidden" name="form-name" value="contact" />
+
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
           </div>
-          <textarea id="message" placeholder="Your Message" required></textarea>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
           <button type="submit">
             Send Message <i class="fas fa-paper-plane"></i>
           </button>
