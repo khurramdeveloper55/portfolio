@@ -129,9 +129,17 @@ header.sticky {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0068c8, #00aaff);
+  overflow: hidden;
   margin-bottom: 2rem;
-  box-shadow: 0 0 25px rgba(0, 104, 200, 0.4);
+  padding: 4px;
+  background: linear-gradient(135deg, #0068c8, #00bfff, #004a99);
+  box-shadow: 0 8px 25px rgba(0, 104, 200, 0.4);
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .hero-text h1 {
@@ -644,6 +652,9 @@ footer .highlight {
   }
   .form-row {
     flex-direction: column;
+  }
+  .hidden {
+    display: none;
   }
 }
 

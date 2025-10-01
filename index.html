@@ -15,6 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -59,7 +61,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="circle"></div>
+      <div class="circle">
+        <img src="img/khurram.jpg" alt="Khurram Shehzad" />
+      </div>
+
       <div class="hero-text">
         <h1>Hi, I am <span class="highlight">Khurram Shehzad</span></h1>
         <h2>
@@ -82,6 +87,7 @@
         React, Next.js, and performance-driven solutions.
       </p>
       <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project-card">
           <img src="/img/nextpress.jpg" alt="" />
           <div class="project-info">
@@ -98,6 +104,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 2 -->
         <div class="project-card">
           <img src="/img/porto-tech.jpg" alt="" />
           <div class="project-info">
@@ -114,6 +121,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 3 -->
         <div class="project-card">
           <img src="/img/natours.jpg" alt="" />
           <div class="project-info">
@@ -130,6 +138,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 4 -->
         <div class="project-card">
           <img src="/img/the-wild-oasis.jpg" alt="" />
           <div class="project-info">
@@ -148,6 +157,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 5 -->
         <div class="project-card">
           <img src="/img/nextpress-dashboard.jpg" alt="" />
           <div class="project-info">
@@ -164,6 +174,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 6 -->
         <div class="project-card">
           <img src="/img/fast-pizza-co.jpg" alt="" />
           <div class="project-info">
@@ -175,6 +186,61 @@
                 ><i class="fab fa-github"></i
               ></a>
               <a href="https://pizza-delivery-co.netlify.app/" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="project-card">
+          <img src="/img/usepopcorn.jpg" alt="" />
+          <div class="project-info">
+            <span>usePopcorn</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/khurramdeveloper55/usepopcorn"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://usepopcorn-movies-box.netlify.app/"
+                target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 8 -->
+        <div class="project-card">
+          <img src="/img/travel-list.jpg" alt="" />
+          <div class="project-info">
+            <span>Travel List</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/khurramdeveloper55/travel-list"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://adventure-travel-list.netlify.app/"
+                target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 9 -->
+        <div class="project-card">
+          <img src="/img/bankist-app.jpg" alt="" />
+          <div class="project-info">
+            <span>Bankist</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/khurramdeveloper55/bankist"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://bankist-bank-app.netlify.app/" target="_blank"
                 ><i class="fas fa-link"></i
               ></a>
             </div>
@@ -192,11 +258,11 @@
         </div>
         <div class="about-text">
           <p>
-            Frontend Developer with 2+ years of experience building responsive
-            and dynamic web applications. Skilled in React.js and Next.js with
-            strong knowledge of state management (Redux, Context API, React
-            Query) and backend integration (Next.js API routes, Node.js,
-            Express, MongoDB, Supabase). Experienced in authentication,
+            I am a Frontend Developer with 2+ years of experience in building
+            responsive and dynamic web applications. Skilled in React.js and
+            Next.js with strong knowledge of state management (Redux, Context
+            API, React Query) and backend integration (Next.js API routes,
+            Node.js, Express, MongoDB, Supabase). Experienced in authentication,
             dashboards, role-based systems, and payment integration. Seeking a
             React/Next.js developer role to deliver scalable, user-focused, and
             performant applications.
@@ -256,10 +322,10 @@
       <div class="skills-grid">
         <div class="skill"><img src="/img/icons/html5.png" alt="" />HTML5</div>
         <div class="skill"><img src="/img/icons/css3.png" alt="" />CSS3</div>
-        <div class="skill">
+        <div class="skill hidden">
           <img src="/img/icons/bootstrap.png" alt="" />Bootstrap
         </div>
-        <div class="skill">
+        <div class="skill hidden">
           <img src="/img/icons/tailwind-css.png" alt="" />Tailwind CSS
         </div>
         <div class="skill">
@@ -268,7 +334,9 @@
         <div class="skill">
           <img src="/img/icons/react.png" alt="" />React.js
         </div>
-        <div class="skill"><img src="/img/icons/redux.png" alt="" />Redux</div>
+        <div class="skill hidden">
+          <img src="/img/icons/redux.png" alt="" />Redux
+        </div>
         <div class="skill">
           <img src="/img/icons/next.js.png" alt="" />Next.js
         </div>
@@ -281,11 +349,13 @@
         <div class="skill">
           <img src="/img/icons/mongodb.png" alt="" />MongoDB
         </div>
-        <div class="skill"><img src="/img/icons/git.png" alt="" />Git</div>
-        <div class="skill">
+        <div class="skill hidden">
+          <img src="/img/icons/git.png" alt="" />Git
+        </div>
+        <div class="skill hidden">
           <img src="/img/icons/github.png" alt="" />GitHub
         </div>
-        <div class="skill">
+        <div class="skill hidden">
           <img src="/img/icons/postman.png" alt="" />Postman
         </div>
       </div>
@@ -301,10 +371,10 @@
       <div class="form-wrapper">
         <form id="contactForm">
           <div class="form-row">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
           </div>
-          <textarea placeholder="Your Message" required></textarea>
+          <textarea id="message" placeholder="Your Message" required></textarea>
           <button type="submit">
             Send Message <i class="fas fa-paper-plane"></i>
           </button>
