@@ -46,11 +46,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   emailjs
-    .send("service_7xsa06h", "template_k5nxzqq", {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    })
+    .send(
+      "service_7xsa06h",
+      "template_k5nxzqq",
+      {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      },
+      "aSrRjPdVwn8E534s3"
+    )
     .then(
       function () {
         showPopup("✅ Message Sent Successfully!");
