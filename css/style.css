@@ -227,38 +227,88 @@ header.sticky {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.project-card {
-  background: #f9f9f9;
 
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.project-card {
+  background: #fff;
   overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 4px 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: rgba(0, 104, 200, 0.2) 0 12px 28px;
+}
+
+/* IMAGE */
 .project-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+  border-bottom: 1px solid rgba(209, 209, 209, 0.664);
 }
 
+.project-card:hover img {
+  transform: scale(1.04);
+}
+
+/* INFO */
 .project-info {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem 1.2rem;
+  gap: 0.8rem;
+}
+
+.project-text span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #12003b;
+  margin-bottom: 0.3rem;
+}
+
+.section.project .project-text p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tech span {
+  background-color: #d4e3fa;
+  color: #12003b;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+/* LINKS */
+.project-links {
+  display: flex;
+  gap: 0.8rem;
   align-items: center;
-  padding: 1rem;
 }
 
 .project-links a {
   color: #0068c8;
-  margin-left: 0.8rem;
-  font-size: 1.2rem;
-  transition: color 0.3s;
+  font-size: 1.3rem;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .project-links a:hover {
-  color: #0050a0;
+  color: #004a96;
+  transform: scale(1.15);
 }
 
 /* About */
