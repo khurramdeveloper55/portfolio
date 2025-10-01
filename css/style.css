@@ -704,9 +704,6 @@ footer .highlight {
   .form-row {
     flex-direction: column;
   }
-  .hidden {
-    display: none;
-  }
 }
 
 /* Animation for sticky */
