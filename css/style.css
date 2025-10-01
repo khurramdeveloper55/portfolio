@@ -347,6 +347,10 @@ header.sticky {
   margin-left: 3rem;
 }
 
+.about-text p {
+  text-align: justify;
+}
+
 .about-info {
   margin: 1.5rem 0;
   font-size: 1rem;
