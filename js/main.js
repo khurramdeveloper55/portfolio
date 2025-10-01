@@ -38,10 +38,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function () {
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Show popup
   const popup = document.createElement("div");
   popup.innerText = "✅ Message Sent Successfully!";
-
   popup.style.position = "fixed";
   popup.style.top = "20px";
   popup.style.right = "20px";
@@ -70,6 +72,8 @@ document.getElementById("contactForm").addEventListener("submit", function () {
     popup.style.transform = "translateY(-20px)";
     setTimeout(() => popup.remove(), 400);
   }, 2500);
+
+  document.getElementById("contactForm").reset();
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
